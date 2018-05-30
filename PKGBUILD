@@ -20,12 +20,11 @@ backup=()
 options=()
 install=
 changelog=
-source=("$pkgname::git+https://github.com/Crystalix007/ksetwallpaper.git")
+source=("ksetwallpaper.py")
 noextract=()
 validpgpkeys=()
 sha256sums=('SKIP')
 
 package() {
-	cd "$pkgname"
-	install -Dm775 -t "${pkgdir}/usr/bin" "ksetwallpaper.py"
+	install -Dm775 -t "${pkgdir}/usr/bin" "$srcdir/ksetwallpaper.py"
 }
